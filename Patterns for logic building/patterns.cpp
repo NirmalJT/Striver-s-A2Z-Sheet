@@ -77,7 +77,7 @@ void print6(int n)
 
 void print7(int n)
 {
-    for (int i = 0; i <= n; i++)
+    for (int i = 0; i < n; i++)
     {
         // space
         for (int j = 0; j < n - i - 1; j++)
@@ -93,10 +93,94 @@ void print7(int n)
         // space
         for (int j = 0; j < n - i - 1; j++)
         {
-            cout <<" ";
+            cout << " ";
         }
 
         cout << endl;
+    }
+}
+
+void print8(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+
+        for (int j = 0; j < 2 * n - (2 * i + 1); j++)
+        {
+            cout << "*";
+        }
+
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print9(int n)
+{
+    for (int i = 0; i < 2 * n; i++)
+    {
+        int space, stars;
+
+        if (i < n)
+        {
+            space = n - i - 1;
+            stars = 2 * i + 1;
+        }
+        else
+        {
+            space = i - n;
+            stars = 2 * (2 * n - 1 - i) + 1;
+        }
+
+        for (int j = 0; j < space; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < stars; j++)
+        {
+            cout << "*";
+        }
+        for (int j = 0; j < space; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print10(int n)
+{
+    for (int i = 0; i < 2 * n; i++)
+    {
+        int stars;
+        if (i < n)
+        {
+            stars = i;
+        }
+        else
+        {
+            stars = 2 * n - i;
+        }
+        for (int j = 0; j < stars; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void print11(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        
     }
 }
 
@@ -105,6 +189,6 @@ int main()
     int n;
     cout << "Enter the number of * you want" << endl;
     cin >> n;
-    print7(n);
+    print11(n);
     return 0;
 }
